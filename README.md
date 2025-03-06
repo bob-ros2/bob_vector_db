@@ -42,8 +42,8 @@ following fields. (for Qdrant the ids are optional)
 ```json
 {
   "collection": "xfiles", 
-  "documents": ["hey ya","jo do"], 
-  "metadatas": [{"name":"bob"}, {"name":"peter"}], 
+  "documents": ["some story text","text about something strange"], 
+  "metadatas": [{"title":"The end"}, {"title":"Dark star"}], 
   "ids": ["id1","id2"]
 }
 ```
