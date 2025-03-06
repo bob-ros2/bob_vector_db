@@ -41,7 +41,7 @@ following fields. (for Qdrant the ids are optional)
 
 ```json
 {
-  "default_collection": "xfiles", 
+  "collection": "xfiles", 
   "documents": ["hey ya","jo do"], 
   "metadatas": [{"name":"bob"}, {"name":"peter"}], 
   "ids": ["id1","id2"]
@@ -68,11 +68,11 @@ ros2 run bob_vector_db embedder --ros-args -p path:=/home/ros/qdrant_data
 ros2 run bob_vector_db embedder --ros-args -p path:=/home/ros/chroma_data -p use_chroma:=true
 
 # Publish from shell an embed order with a single item.
-ros2 topic pub --once embed std_msgs/msg/String 'data: "{\"default_collection\":\"xfiles\", \"documents\":[\"Bobs ROS nodes are a collection of NLP and LLM tools for ROS\"], \"metadatas\": [{\"author\":\"bob\"}], \"ids\":[\"id1\"]}"'
+ros2 topic pub --once embed std_msgs/msg/String 'data: "{\"collection\":\"xfiles\", \"documents\":[\"Bobs ROS nodes are a collection of NLP and LLM tools for ROS\"], \"metadatas\": [{\"author\":\"bob\"}], \"ids\":[\"id1\"]}"'
 
 # Embed one or more image together with the text representation
 # When embedding images vectors for both, the text and the image, are produced and stored into the Qdrant DB
-ros2 topic pub --once embed std_msgs/msg/String 'data: "{\"default_collection\":\"image_data\", \"documents\":[\"An animal from the animal farm in pink\"], \"images\": [\"/home/ros/ros2_ws/img/images/piglet.jpg\"], \"metadatas\": [{\"author\":\"bob\"}]}"'
+ros2 topic pub --once embed std_msgs/msg/String 'data: "{\"collection\":\"image_data\", \"documents\":[\"An animal from the animal farm in pink\"], \"images\": [\"/home/ros/ros2_ws/img/images/piglet.jpg\"], \"metadatas\": [{\"author\":\"bob\"}]}"'
 
 # Start image/text embedder together with a topic terminal to enter image embed messages manually
 # When setting EMBED_IMAGES_BASE64=1 in addtition to the path the image is stored in BASE64 format into payload key `image_base64`
