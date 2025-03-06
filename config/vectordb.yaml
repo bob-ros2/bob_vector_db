@@ -1,0 +1,31 @@
+/**/embedder:
+  ros__parameters:
+    #model: 'sentence-transformers/all-MiniLM-L6-v2'
+    #default_collection: embed_raw
+    #host: localhost
+    #port: 6333
+    location: ''
+    path: ''
+
+/**/terminal_embed:
+  ros__parameters:
+    title: Vector DB Embedder Terminal
+    display: -1
+    fontname: courier
+    fontsize: 15
+    frameless: false
+    input: true
+    line_count: 0
+    opacity: 1.0
+    stylesheet: 'background-color: black; color: #e9e9e9;'
+    stylesheet_window: 'background-color: #dc3545; color white;'
+    geometry:
+    - 0
+    - 0
+    - 1000
+    - 480
+    margin:
+    - 10
+    - 0
+    - 0
+    - 0
