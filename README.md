@@ -1,4 +1,4 @@
-# ROS Package bob_vector_db
+# ROS Package [bob_vector_db](https://github.com/bob-ros2/bob_vector_db)
 
 This package integrates a Vector DB into ROS which can be accessed via ROS topics.
 
