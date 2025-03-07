@@ -21,10 +21,6 @@ A Qdrant Vector DB is the default DB, optionally a Chroma DB can be used.
 By default Sentence Transformers `all-MiniLM-L6-v2` model will be used to 
 create the embeddings.
 
-with open('./tts.yaml') as file:
-    print(yaml.safe_load(file))
-
-
 Related Qdrant links:
 - [https://qdrant.tech/](https://qdrant.tech/)
 - [https://github.com/qdrant/fastembed](https://github.com/qdrant/fastembed)
