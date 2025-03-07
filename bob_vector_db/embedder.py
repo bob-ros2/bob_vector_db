@@ -33,10 +33,28 @@ class EmbedderNode(Node):
     This ROS node subscribes to a std_msgs/msg/String topic to receive JSON data with embedding messages. 
     Additionaly, when using a Qdrant vector Database, it's possible to embed Images along with text and 
     Payload data from a sensor_msgs/msg/Image or bob_msgs/msg/STTImage. 
+
     It embeds the delivered data into the configured Vector DB. A Qdrant Vector DB is the default DB. 
     To embed into a Chroma DB set parameter 'use_chroma' to true. See ROS parameter for further configuration. 
     The JSON data has to contain the following fields. (for Qdrant the ids are optional).
-    {"collection":"stories", "documents":["some story text","text abou something strange"], "metadatas": [{"title":"The end"}, {"title":"Dark star"}], "ids":['id1','id2']}
+    
+    .. code-block:: json
+        {
+            "collection": "stories", 
+            "documents": [
+                "some story text",
+                "text abou something strange"
+            ], 
+            "metadatas": [
+                {"title":"The end"}, 
+                {"title":"Dark star"}
+            ], 
+            "ids":[
+                'id1',
+                'id2'
+            ]
+        }
+    
     To embed also sensor_msgs/msg/Image or bob_msgs/msg/STTImage see README.md for further information.
     """
     def __init__(self):
