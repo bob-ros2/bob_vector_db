@@ -65,11 +65,11 @@ following fields. (for Qdrant the ids are optional)
 
 Enable / disable automatic storing of the image in Base64 format into payload data:
 
-> EMBED_IMAGES_BASE64 Default: 0
+>**EMBED_IMAGES_BASE64** Default: 0
 
 Used image format when embedding from sensor_msgs/msg/Image or bob_msgs/msg/STTImage:
 
-> EMBED_PIL_B64FORMAT Default: JPEG
+>**EMBED_PIL_B64FORMAT** Default: JPEG
 
 ### Usage
 ```bash
