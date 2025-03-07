@@ -61,6 +61,16 @@ following fields. (for Qdrant the ids are optional)
 }
 ```
 
+**Image embedding environment variables**
+
+Enable / disable automatic storing of the image in Base64 format into payload data:
+
+> EMBED_IMAGES_BASE64 Default: 0
+
+Used image format when embedding from sensor_msgs/msg/Image or bob_msgs/msg/STTImage:
+
+> EMBED_PIL_B64FORMAT Default: JPEG
+
 ### Usage
 ```bash
 # in order to work some of the below examples expects a running Qdrant or Chroma Vector DB
