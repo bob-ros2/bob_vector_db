@@ -6,6 +6,7 @@ from chromadb.utils import embedding_functions as ef
 
 class ChromaEmbedder(json_embedder.JsonEmbedder):
     """Chroma JSON embedding interface.
+    
     The __call__ function expects a string with a JSON dict containing the following attributes:
       collection: to be used collection name
       documents: list with document strings

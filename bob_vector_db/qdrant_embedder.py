@@ -16,11 +16,11 @@ class QdrantEmbedder(json_embedder.JsonEmbedder):
     """Qdrant JSON embedding interface.
 
     The __call__ function expects a string with a JSON dict containing the following attributes:
-      collection: to be used collection name
-      documents: list with document content, if also images are provided this should be the caption
-      metadatas: list of metadata dictionaries used as payload
-      images: optional list of image file names to embed along with the documents
-      ids: optional list of id strings, if not provided automatically uuid4 are created
+      collection: to be used collection name. 
+      documents: list with document content, if also images are provided this should be the caption. 
+      metadatas: list of metadata dictionaries used as payload. 
+      images: optional list of image file names to embed along with the documents. 
+      ids: optional list of id strings, if not provided automatically uuid4 are created. 
     """
 
     def __init__(self, model: str, **kwargs):

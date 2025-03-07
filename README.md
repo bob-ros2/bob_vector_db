@@ -21,18 +21,19 @@ A Qdrant Vector DB is the default DB, optionally a Chroma DB can be used.
 By default Sentence Transformers `all-MiniLM-L6-v2` model will be used to 
 create the embeddings.
 
+with open('./tts.yaml') as file:
+    print(yaml.safe_load(file))
+
+
 Related Qdrant links:
-- https://qdrant.tech/
-- https://github.com/qdrant/fastembed
-- https://qdrant.tech/documentation/embeddings
+- [https://qdrant.tech/](https://qdrant.tech/)
+- [https://github.com/qdrant/fastembed](https://github.com/qdrant/fastembed)
+- [https://qdrant.tech/documentation/embeddings](https://qdrant.tech/documentation/embeddings)
 - [Supported Models](https://qdrant.github.io/fastembed/examples/Supported_Models/#supported-text-embedding-models)
 
-
 Related Chroma links:
-- https://www.trychroma.com/
-- https://docs.trychroma.com/
-
-
+- [https://www.trychroma.com/](https://www.trychroma.com/)
+- [https://docs.trychroma.com/](https://docs.trychroma.com/)
 
 ### Embedding data format
 
@@ -121,5 +122,5 @@ Incoming String with raw data.
 > ~embed_image (sensor_msgs/msg/Image)\
 Incoming ROS Image to embed.
 
-> ~embed_ttimage (bob_msgs/msg/TTImage)\
+> ~embed_ttimage ([bob_msgs/msg/TTImage](https://github.com/bob-ros2/bob_msgs/blob/main/msg/TTImage.msg))\
 Incoming TTImage with payload to embed.
