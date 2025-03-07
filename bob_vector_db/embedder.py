@@ -77,7 +77,7 @@ class EmbedderNode(Node):
             ]
         }
 
-    For the image embedding there eixst following environment variables
+    For the image embedding there eixst following environment variables:
 
     Setting this to 1 will enable automatic storing of the image in Base64 format into the payload data
         EMBED_IMAGES_BASE64 Default: 0
