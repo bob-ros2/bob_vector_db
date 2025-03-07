@@ -67,7 +67,7 @@ Enable / disable automatic storing of the image in Base64 format into payload da
 
 >**EMBED_IMAGES_BASE64** Default: 0
 
-Used image format when embedding from sensor_msgs/msg/Image or bob_msgs/msg/STTImage:
+Used image format when embedding from [sensor_msgs/msg/Image](https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html) or [bob_msgs/msg/STTImage](https://github.com/bob-ros2/bob_msgs/blob/main/msg/TTImage.msg):
 
 >**EMBED_PIL_B64FORMAT** Default: JPEG
 
@@ -135,13 +135,13 @@ EMBED_IMAGES_BASE64=1 ros2 launch bob_vector_db embedder.launch.py terminal:=tru
 
 ### Subscribed Topics
 
-> ~embed (std_msgs/msg/String)\
+> ~embed ([std_msgs/msg/String](https://docs.ros.org/en/melodic/api/std_msgs/html/msg/String.html))\
 Incoming JSON string with the embedding data.
 
-> ~embed_raw (std_msgs/msg/String)\
+> ~embed_raw ([std_msgs/msg/String](https://docs.ros.org/en/melodic/api/std_msgs/html/msg/String.html))\
 Incoming String with raw data.
 
-> ~embed_image (sensor_msgs/msg/Image)\
+> ~embed_image ([sensor_msgs/msg/Image](https://docs.ros.org/en/noetic/api/sensor_msgs/html/msg/Image.html))\
 Incoming ROS Image to embed.
 
 > ~embed_ttimage ([bob_msgs/msg/TTImage](https://github.com/bob-ros2/bob_msgs/blob/main/msg/TTImage.msg))\
