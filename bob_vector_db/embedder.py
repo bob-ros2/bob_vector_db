@@ -77,13 +77,13 @@ class EmbedderNode(Node):
             ]
         }
 
-    For the image embedding there eixst following environment variables:
+    For the image embedding there eixst following environment variables
 
-    Setting this to 1 will enable automatic storing of the image in Base64 format into the payload data:
-        EMBED_IMAGES_BASE64 Default: 0
-        
+    Setting this to 1 will enable automatic storing of the image in Base64 format into the payload data
+    > EMBED_IMAGES_BASE64 Default: 0
+
     When embedding from sensor_msgs/msg/Image or bob_msgs/msg/STTImage the image format can be configured
-        EMBED_PIL_B64FORMAT  Default: JPEG
+    > EMBED_PIL_B64FORMAT Default: JPEG
 
     To embed also sensor_msgs/msg/Image or bob_msgs/msg/STTImage see README.md for further information.
     """
