@@ -29,7 +29,8 @@ from bob_msgs.msg import TTImage
 from typing import Union
 
 class EmbedderNode(Node):
-    """Basic Embedder ROS Node.
+    """
+    Basic Embedder ROS Node.
     This ROS node subscribes to a std_msgs/msg/String topic to receive JSON data with embedding messages. 
     Additionaly, when using a Qdrant vector Database, it's possible to embed Images along with text and 
     Payload data from a sensor_msgs/msg/Image or bob_msgs/msg/STTImage. 
@@ -38,7 +39,7 @@ class EmbedderNode(Node):
     To embed into a Chroma DB set parameter 'use_chroma' to true. See ROS parameter for further configuration. 
     The JSON data has to contain the following fields. (for Qdrant the ids are optional).
 
-    `Json`::
+    .. code-block:: json
         {
             "collection": "stories", 
             "documents": [
