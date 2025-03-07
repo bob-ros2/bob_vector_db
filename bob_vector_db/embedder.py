@@ -38,7 +38,7 @@ class EmbedderNode(Node):
     To embed into a Chroma DB set parameter 'use_chroma' to true. See ROS parameter for further configuration. 
     The JSON data has to contain the following fields. (for Qdrant the ids are optional).
 
-    .. code-block:: json
+    .. code-block:: python
        {
            "collection": "stories", 
            "documents": [
