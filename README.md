@@ -40,11 +40,23 @@ Related Chroma links:
 The JSON data which is received by the String topic has to contain the 
 following fields. (for Qdrant the ids are optional) 
 
+*Embed text*
 ```json
 {
   "collection": "xfiles", 
   "documents": ["some story text","text about something strange"], 
   "metadatas": [{"title":"The end"}, {"title":"Dark star"}], 
+  "ids": ["id1","id2"]
+}
+```
+
+*Embed text + image (Qdrant only)*
+```json
+{
+  "collection": "movie_cover", 
+  "documents": ["some story text","text about something strange"], 
+  "metadatas": [{"title":"The end"}, {"title":"Dark star"}], 
+  "images": ["/path/to/image_id1.jpg","/path/to/image_id2.jpg"],
   "ids": ["id1","id2"]
 }
 ```

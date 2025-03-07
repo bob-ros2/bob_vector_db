@@ -38,8 +38,8 @@ class EmbedderNode(Node):
     To embed into a Chroma DB set parameter 'use_chroma' to true. See ROS parameter for further configuration. 
     The JSON data has to contain the following fields. (for Qdrant the ids are optional).
 
-    `Search for closest points with a filter`::
-    
+    `Example of a text embedding`::
+
         {
             "collection": "stories", 
             "documents": [
@@ -51,11 +51,32 @@ class EmbedderNode(Node):
                 {"title":"Dark star"}
             ], 
             "ids":[
-                'id1',
-                'id2'
+                "id1",
+                "id2"
             ]
         }
-    
+
+    `Example of a text + image embedding`::
+
+        {
+            "collection": "movie_cover", 
+            "documents": [
+                "some story text",
+                "text about something strange"
+            ], 
+            "metadatas": [
+                {"title":"The end"}, 
+                {"title":"Dark star"}
+            ], 
+            "images": [
+                "/path/to/cover_image_id1.jpg", 
+                "/path/to/cover_image_id2.jpg"
+            ], "ids":[
+                "id1",
+                "id2"
+            ]
+        }
+
     To embed also sensor_msgs/msg/Image or bob_msgs/msg/STTImage see README.md for further information.
     """
     def __init__(self):
